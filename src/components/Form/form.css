@@ -1,0 +1,24 @@
+
+
+@media screen and (min-width: 1200px) {
+.form_wrapper-inner{
+  
+    margin: 0 auto; 
+}
+
+.contact-form__section {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form__section-right{
+    min-width: 500px;
+}
+
+}
+@media screen and (max-width: 600px) {
+.contact-form__section-right{
+    width: 100%;
+}
+
+
+}
