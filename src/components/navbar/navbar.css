@@ -252,7 +252,7 @@ padding: 0 20px 0 20px;
     color: var(--dark);
     /* height: 310px; */
     width: 373px;
-    display: none;
+    /* display: none; */
     background-color:var(--white);
     z-index: 100;
  
