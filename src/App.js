@@ -41,7 +41,6 @@ class App extends Component {
   fetchProducts() {
     commerce.products.list().then((products) => {
       this.setState({ products: products.data });
-      console.log(this.state.products)
 
     }).catch((error) => {
       console.log('There was an error fetching the products', error);
@@ -50,7 +49,6 @@ class App extends Component {
   fetchCart() {
     commerce.cart.retrieve().then((cart) => {
       this.setState({ cart });
-      console.log(this.state.cart)
     }).catch((error) => {
       console.error('There was an error fetching the cart', error);
     });

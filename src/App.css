@@ -268,9 +268,7 @@ span{
     color: var(--black);
     text-decoration: none ;
 }
-.shopping-items{
-    display: none;
-}
+
 .cart-title{
     text-align: center;
 }
