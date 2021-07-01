@@ -16,7 +16,7 @@ return(
 
         <div className="navbar__left-wrapper">
          <div className="navbar__left-logo">
-                <Link className="navbar__center_item-link" to="/">
+                <Link className="navbar__center_item-link" to="/eccommerce-shop">
                     <img src={logo} />
                 </Link>
                
@@ -26,7 +26,7 @@ return(
 
         <div className="navbar__center-wrapper">
             <ul className="navbar__center-list">
-                <li className="navbar__center_item"><Link className="navbar__center_item-link" to="/">Home</Link></li>
+                <li className="navbar__center_item"><Link className="navbar__center_item-link" to="/eccommerce-shop">Home</Link></li>
                 <li className="navbar__center_item"><Link className="navbar__center_item-link" to="/shop">Shop</Link></li>
                 <li className="navbar__center_item"><Link className="navbar__center_item-link" to="/ricardo-special"> Special</Link></li>
                 <li className="navbar__center_item"><Link className="navbar__center_item-link" to="/contact">Contact</Link></li>

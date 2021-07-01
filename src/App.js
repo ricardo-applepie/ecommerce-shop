@@ -78,7 +78,7 @@ class App extends Component {
 
 
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/eccommerce-shop">
           <Homepage products={products} />
         </Route>
         <Route path="/product/:id">

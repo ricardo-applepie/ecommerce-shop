@@ -18,7 +18,7 @@ export const Footer = () => {
                 <ul className="footer__center-wrapper">
                     <li className="footer__center_item">
                       
-                    <Link className="navbar__center_item-link" to="/">
+                        <Link className="navbar__center_item-link" to="/eccommerce-shop">
                             Home
                     </Link>
                    </li>
