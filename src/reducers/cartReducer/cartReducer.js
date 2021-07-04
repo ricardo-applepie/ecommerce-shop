@@ -5,7 +5,9 @@ export const CartSlice = createSlice({
     name: 'cart',
     initialState: {
         cartItems: [],
-        
+        products:[],
+        totalInCart:{}
+       
     },
     reducers: {
         increment: (state,action) => {
@@ -20,6 +22,12 @@ export const CartSlice = createSlice({
         },
         setCartInfo: (state, action) => {
             state.cartItems = action.payload
+        },
+        productsfetch: (state, action)=>{
+            state.products = action.payload
+        },
+        totalInCartItems: (state, action) => {
+            state.totalInCart = action.payload
         }
     }
 })

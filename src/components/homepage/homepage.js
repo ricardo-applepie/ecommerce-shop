@@ -1,4 +1,4 @@
-import {React} from "react";
+import { React, useState} from "react";
 import Contactform from "../Form/form";
 import SearchForm from "../search_form/search_form"
 import Productdetails from "../product-details/product-details"
@@ -7,14 +7,38 @@ import { Footer } from '../footer/footer';
 import Carouselslider from "../caroussel/carousel";
 import Button from "../button/button";
 import ProductsList from '../ProductsList';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
+
 import {
    Link
 
 } from "react-router-dom";
 
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '100%',
+        '& > * + *': {
+            marginTop: theme.spacing(2),
+        },
+    },
+}));
 function Homepage(props){
+    const [open, setOpen] = useState(false);
 
+  
+  
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+    };
 
     return(
         <div>
@@ -125,6 +149,11 @@ function Homepage(props){
 
                             </div>
                             {/* <Getcartitems /> */}
+                            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                                <Alert onClose={handleClose} severity="success">
+                                    item added
+                                </Alert>
+                            </Snackbar>
                         </div>
                     
                     </div>

@@ -9,22 +9,17 @@ import {
 
 } from "react-router-dom";
 
-class ProductItem extends Component {
-   constructor(props){
+ function ProductItem (props) {
 
-       super(props);
-   }
-
- addToCart=()=>{
+ const addToCart=()=>{
      
-     commerce.cart.add(this.props.product.id, 1)
-
+     commerce.cart.add(props.product.id, 1)
  }
  
 
-    render() {
+ 
 
-        const { product } = this.props
+        const { product } = props
         const { result } = stripHtml(product.description);
 
 
@@ -51,7 +46,7 @@ class ProductItem extends Component {
                     <div>
                         <HoverRating/>
                     </div>
-                    <button className="product__details-button" onClick={this.addToCart}>
+                    <button className="product__details-button" onClick={()=>(addToCart())}>
                        
                       
                         add To cart
@@ -61,6 +56,6 @@ class ProductItem extends Component {
                 </div>
             </div>
         );
-    }
+    
 };
 export default ProductItem;

@@ -8,6 +8,7 @@ import { commerce } from '../../lib/commerce';
 
 function CartItems (props){
     const [cartDisplay, toggleCartDisplay] = useState(false);
+  
 
     const dispatch = useDispatch()
 
@@ -22,18 +23,24 @@ function CartItems (props){
                     dispatch({ type: "cart/increment", payload: items })
 
                 });
+                commerce.cart.retrieve().then((cart) => {
+                 console.log(cart)
+                    dispatch({ type: "cart/totalInCartItems", payload: cart })
 
+                });
 
             }
         }
         dispatch(fetchCartItems())
-
     });
     const cartState = useSelector((state) => state.cart)
+    const cartInfo = useSelector((state) => state.cart.totalInCart);
+
 
     return(
         <div id="right" className="navbar__right-wrapper">
-            <a onClick={() => toggleCartDisplay(!cartDisplay)}>
+            <a className="navbar__right-wrapper__link" onClick={() => toggleCartDisplay(!cartDisplay)}>
+                <span className="navbar__right-wrapper__totalIncart" >{cartInfo.total_items}</span>
                 <img src={carticon} />
 
             </a>
@@ -61,7 +68,6 @@ function CartItems (props){
                                                 <div className="cart-atribute">{productItem.name}</div>
                                                 <div className="cart-atribute"><b>Price :</b> {productItem.price.formatted_with_symbol}</div>
                                                 <div className="cart-atribute"><b>quantity :</b> {productItem.quantity}</div>
-                                                <div className="cart-atribute"><span> <b>Total-items :</b>  </span> <span>{props.total && props.total.subtotal && props.total.total_unique_items}</span> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +83,7 @@ function CartItems (props){
 
                 <div className="total_sum-in-cart">
                     <span><b>GESAMT :</b></span>
-                    <span className="total-amount">{}</span>
+                        <span className="total-amount">{cartInfo.subtotal.formatted_with_code}</span>
 
                 </div>
                 <div className="button mini-cart-link-checkout">

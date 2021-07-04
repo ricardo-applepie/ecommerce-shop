@@ -7,6 +7,15 @@
     width: 50%;
     padding: 5% 5% 5% 5%;
 }
+.navbar__right-wrapper__link{
+  position: relative;
+}
+.navbar__right-wrapper__totalIncart {
+    position: absolute;
+    right: -5px;
+    color: var(--white);
+    font-weight: bold;
+}
 .marketplace__image {
     width: 50%;
     padding: 4% 5% 4% 5%;

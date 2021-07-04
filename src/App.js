@@ -1,5 +1,6 @@
 
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 
 import logo from './logo.svg';
 
@@ -17,6 +18,7 @@ import Login from "./components/login/login"
 import Signup from "./pages/signup/signup";
 import Contact from "./pages/contact/contact";
 import Checkout from "./pages/checkout/checkout";
+
 import {
   Switch,
   Route,
@@ -27,54 +29,52 @@ import {
 
 
 
-class App extends Component {
-  constructor() {
-    super();
+function App() {
 
-    this.state = {
-      products: [],
-      cart: []
+ 
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+    fetchProducts()
+    fetchCart()
+    dispatch(fetchProducts())
+
+  },[])
+
+  function fetchProducts() {
+    return function fetchProductsthunk(dispatch) {
+
+      commerce.products.list().then((products) => {
+      dispatch({ type: "cart/productsfetch", payload: products.data })
+      console.log(products.data[0].id)
+      }).catch((error) => {
+        console.log('There was an error fetching the products', error);
+      });
     }
+
   }
 
-  fetchProducts() {
-    commerce.products.list().then((products) => {
-      this.setState({ products: products.data });
-
-    }).catch((error) => {
-      console.log('There was an error fetching the products', error);
-    });
-  }
-  fetchCart() {
+  function fetchCart() {
     commerce.cart.retrieve().then((cart) => {
-      this.setState({ cart });
     }).catch((error) => {
       console.error('There was an error fetching the cart', error);
     });
   }
 
-  componentDidMount() {
-    this.fetchProducts();
-    this.fetchCart();
-
-  }
+  const { products} = useSelector((state) => state.cart)
 
 
-  render() {
-    const { products } = this.state;
-    
-
+   
   return (
    <div>
 
-      <div className="content__wrapper">
+       <div className="content__wrapper">
         <nav className="nav-wrapper">
-          <Navbar total={this.state.cart} />
-           
+          <Navbar />
+
         </nav>
-     
-        </div>
+
+      </div>
 
 
       <Switch>
@@ -82,10 +82,10 @@ class App extends Component {
           <Homepage products={products} />
         </Route>
         <Route path="/product/:id">
-          <Productdetails products={products}/>
+          <Productdetails products={products} />
         </Route>
         <Route path="/shop">
-          <Shop products={products}/>
+          <Shop products={products} />
         </Route>
         <Route path="/services">
           Services
@@ -97,42 +97,42 @@ class App extends Component {
           accessories
         </Route>
         <Route path="/ricardo-special">
-          <Special/>
+          <Special />
         </Route>
         <Route path="/Shipping">
           Shipping
         </Route>
         <Route path="/contact">
-          <Contact/>
+          <Contact />
         </Route>
         <Route path="/about">
           About
         </Route>
         <Route path="/cart">
-          <Cartpage/>
+          <Cartpage />
         </Route>
         <Route path="/checkout">
-          <Checkout/>
+          <Checkout />
         </Route>
         <Route path="/login">
-         
-            <Login />
-        
+
+          <Login />
+
         </Route>
         <Route path="/signup">
           <Signup />
         </Route>
-        
-        
+
+
       </Switch>
-   
-   <div className="footer-wrapper">
-    
-        <Footer/>
-   </div>
+
+      <div className="footer-wrapper">
+
+        <Footer />
+      </div> 
    </div>
   );
-}
+
 }
 
 export default App;

@@ -1,5 +1,4 @@
 import React, {  useEffect } from 'react';
-import EditIcon from '@material-ui/icons/Edit';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
@@ -8,6 +7,7 @@ import { commerce } from '../../lib/commerce';
 
 
 import Snackbar from '@material-ui/core/Snackbar';
+import DeleteIcon from '@material-ui/icons/Delete';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -93,7 +93,7 @@ function Cartpage({total}) {
                                
                                 <div className="cartEdit">
                                     <div onClick={() => dispatch(removeItemFromCart(cartItem))}>
-                                        <EditIcon /> 
+                                        <DeleteIcon />
                                         <span>
                                             Details bearbeiten
 
