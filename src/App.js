@@ -35,8 +35,6 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetchProducts()
-    fetchCart()
     dispatch(fetchProducts())
 
   },[])
@@ -46,7 +44,6 @@ function App() {
 
       commerce.products.list().then((products) => {
       dispatch({ type: "cart/productsfetch", payload: products.data })
-      console.log(products.data[0].id)
       }).catch((error) => {
         console.log('There was an error fetching the products', error);
       });
@@ -54,12 +51,6 @@ function App() {
 
   }
 
-  function fetchCart() {
-    commerce.cart.retrieve().then((cart) => {
-    }).catch((error) => {
-      console.error('There was an error fetching the cart', error);
-    });
-  }
 
   const { products} = useSelector((state) => state.cart)
 

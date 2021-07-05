@@ -11,31 +11,32 @@ function CartItems (props){
   
 
     const dispatch = useDispatch()
+    function fetchCartItems() {
 
+        return function name(dispatch) {
+
+            commerce.cart.contents().then((items) => {
+
+                dispatch({ type: "cart/increment", payload: items })
+
+            });
+            commerce.cart.retrieve().then((cart) => {
+                console.log(cart)
+                dispatch({ type: "cart/totalInCartItems", payload: cart })
+
+            });
+
+        }
+    }
     useEffect(() => {
         // Update the document title using the browser API
-        function fetchCartItems() {
-
-            return function name(dispatch) {
-
-                commerce.cart.contents().then((items) => {
-
-                    dispatch({ type: "cart/increment", payload: items })
-
-                });
-                commerce.cart.retrieve().then((cart) => {
-                 console.log(cart)
-                    dispatch({ type: "cart/totalInCartItems", payload: cart })
-
-                });
-
-            }
-        }
+      
         dispatch(fetchCartItems())
+
     });
     const cartState = useSelector((state) => state.cart)
     const cartInfo = useSelector((state) => state.cart.totalInCart);
-
+    console.log(cartInfo)
 
     return(
         <div id="right" className="navbar__right-wrapper">
@@ -83,7 +84,7 @@ function CartItems (props){
 
                 <div className="total_sum-in-cart">
                     <span><b>GESAMT :</b></span>
-                        <span className="total-amount">{cartInfo.subtotal.formatted_with_code}</span>
+                        <span className="total-amount">{}</span>
 
                 </div>
                 <div className="button mini-cart-link-checkout">

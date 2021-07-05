@@ -4,7 +4,6 @@ import ProductItem from './product-item';
 class ProductsList extends Component {
     
     render() {
-       const add = this.props.SetaddItemstate;
         const { products } = this.props;
 
         return (
