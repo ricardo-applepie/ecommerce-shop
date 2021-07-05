@@ -91,7 +91,7 @@ function App() {
           <Special />
         </Route>
         <Route path="/Shipping">
-          Shipping
+          Shipping Method
         </Route>
         <Route path="/contact">
           <Contact />
