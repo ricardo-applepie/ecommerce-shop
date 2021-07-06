@@ -2,42 +2,43 @@ import React, { useEffect, useState } from 'react';
 import carticon from "../../assets/cart-icon.png"
 import { Link } from "react-router-dom";
 import Button from "../button/button";
+
 import { useSelector, useDispatch } from 'react-redux';
 import { commerce } from '../../lib/commerce';
 
+export const fetchCartItems=()=> {
+
+    return function name(dispatch) {
+
+        commerce.cart.contents().then((items) => {
+
+            dispatch({ type: "cart/increment", payload: items })
+
+        });
+        commerce.cart.retrieve().then((cart) => {
+            dispatch({ type: "cart/totalInCartItems", payload: cart })
+            dispatch({ type: "cart/totalSum", payload: cart.subtotal.formatted })
+
+        });
+
+    }
+}
 
 function CartItems (props){
     const [cartDisplay, toggleCartDisplay] = useState(false);
   
 
     const dispatch = useDispatch()
-    function fetchCartItems() {
-
-        return function name(dispatch) {
-
-            commerce.cart.contents().then((items) => {
-
-                dispatch({ type: "cart/increment", payload: items })
-
-            });
-            commerce.cart.retrieve().then((cart) => {
-                console.log(cart)
-                dispatch({ type: "cart/totalInCartItems", payload: cart })
-
-            });
-
-        }
-    }
+   
     useEffect(() => {
         // Update the document title using the browser API
       
         dispatch(fetchCartItems())
 
-    });
+    },[]);
     const cartState = useSelector((state) => state.cart)
     const cartInfo = useSelector((state) => state.cart.totalInCart);
-    console.log(cartInfo)
-
+    const total = useSelector((state) => state.cart.totalPrice);
     return(
         <div id="right" className="navbar__right-wrapper">
             <a className="navbar__right-wrapper__link" onClick={() => toggleCartDisplay(!cartDisplay)}>
@@ -50,12 +51,15 @@ function CartItems (props){
                 <div className=" shopping-items-max-height">
                     {
                         cartState.cartItems.map(function (productItem) {
+
+                            
                             return (
                                 <div>
-
+                                    <Link to={`/product/${productItem.product_id}`}>
+                                        
                                     <div className="shopping-items__inner-wrapper">
 
-
+                                      
                                         <div class="mini-cart-image-container">
                                             <div>
                                                 <img src={productItem.media.source} />
@@ -72,7 +76,7 @@ function CartItems (props){
                                             </div>
                                         </div>
                                     </div>
-
+                                    </Link>
                                 </div>
                             )
                         })
@@ -82,15 +86,15 @@ function CartItems (props){
                 </div>
 
 
-                <div className="total_sum-in-cart">
+                    {cartState.cartItems.length>0 ? <div className="total_sum-in-cart">
                     <span><b>GESAMT :</b></span>
-                        <span className="total-amount">{}</span>
+                        <span className="total-amount">{total} €</span>
 
-                </div>
+                </div>: (<p className="error error-message-cart">please add items to cart</p>)}
                 <div className="button mini-cart-link-checkout">
                     <Link className="navbar__center_item-link" to="/cart">
                         <Button>
-                            Kasse
+                            Cart
                         </Button>
 
                     </Link>

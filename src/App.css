@@ -1,7 +1,6 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -106,8 +105,15 @@ h6 {
 p {
     margin-top: 0;
     margin-bottom: 0rem !important;
+    font-weight: bold;
 }
-
+p,h1,h2,h3,span,a,label{
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+} 
+h1{
+    font-weight: 900 !important;
+}
 address {
     margin-bottom: 1rem;
     font-style: normal;
@@ -212,7 +218,7 @@ button{
 
 
 @media screen and (max-width: 600px) {
-    p{
+    p,label{
         font-size: 13px;
     }
  .form_wrapper-inner {
@@ -273,9 +279,7 @@ span{
 .cart-title{
     text-align: center;
 }
-.navbar__center-wrapper{
-    display: none !important;
-}
+
 .cart-items-wrapper {
     display: flex;
     align-items: center;

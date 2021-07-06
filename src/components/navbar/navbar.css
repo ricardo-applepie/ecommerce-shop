@@ -1,9 +1,18 @@
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 .contact-form__section{
 display: flex;
 flex-direction: column;
 
+}
+.mobile-menu-items a{
+    text-decoration: none;
+}
+.mobile-menu-items a:hover{
+    color: var(--white);
+}
+.mobile-menu-items{
+    padding-left: 0;
 }
 .contact-form__section-left img{
     width: 323px;
@@ -82,12 +91,48 @@ padding: 5px;
 
 }
 
-.navbar__left-logo{
+.navbar__left-logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
-
+.mobile-menu-items {
+    background-color: var(--red);
+    padding: 20px 0 20px 0;
+    margin-top: 15px;
+}
+.makeStyles-root-1 {
+    width: 200px;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    text-align: left;
+}
+.MuiRating-root{
+    margin-left: -10px;
+}
+.MuiBox-root-4 {
+    margin-left: 12px;
+}
+.mobile-menu{
+    position: top;
+    position: absolute;
+    z-index: 10000000;
+    width: 130px;
+    top: 19px;
+    left: 10px;
+    color: var(--white);
+}
+.mobile-menu-items li {
+    padding: 0px 0 0 12px;
+    margin-top: 20px;
+}
+   .MuiSvgIcon-root{
+ transform: scale(1.5);
+ margin-left: 10px;
+   }
+  
 .total-amount{
     color: var(--red);
 }
@@ -110,14 +155,7 @@ flex-direction: column;
     display: flex;
     }
 .navbar__center-wrapper {
-    position: absolute;
-    flex-direction: column;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    z-index: 10011111;
-    background-color: red;
-    transform: translateX(100%)
+   display: none;
 }
 ::-webkit-scrollbar-thumb {
   background: red; 
@@ -199,7 +237,9 @@ max-height: 100%;
 .nav-wrapper{
     background-color: var(--red);
 }
-
+.mobile-menu{
+    display: none;
+}
 .navbar__inner-wrapper{
  display: flex;
    padding :10px;

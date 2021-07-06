@@ -7,7 +7,7 @@ import { Link} from "react-router-dom";
 function Shop(props) {
     return(
         <div>
-                <div className="notification-bar ">
+            <div className="notification-bar content__wrapper-width ">
                             <div className="notification-bar-left">
                                 <span>Download our App</span>
                                 <span>And get a free T-shirt</span>
@@ -24,15 +24,7 @@ function Shop(props) {
                         </div>
        
         <div className="content__wrapper-width">
-         <div>
-                    <Breadcrumb>
-                        <Breadcrumb.Item ><Link to="/"> Home</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item >
-                            <Link to="/shop"> shop</Link>
-                        </Breadcrumb.Item>
-                        <Breadcrumb.Item active>product</Breadcrumb.Item>
-                    </Breadcrumb>
-         </div>
+     
         
         <div>
     
@@ -57,25 +49,7 @@ function Shop(props) {
             <div>
                 <ProductsList products={props.products} />
             </div>
-            <div className="pagnation">
-                        <Pagination>
-                            <Pagination.First />
-                            <Pagination.Prev />
-                            <Pagination.Item>{1}</Pagination.Item>
-                            <Pagination.Ellipsis />
-
-                            <Pagination.Item>{10}</Pagination.Item>
-                            <Pagination.Item>{11}</Pagination.Item>
-                            <Pagination.Item active>{12}</Pagination.Item>
-                            <Pagination.Item>{13}</Pagination.Item>
-                            <Pagination.Item disabled>{14}</Pagination.Item>
-
-                            <Pagination.Ellipsis />
-                            <Pagination.Item>{20}</Pagination.Item>
-                            <Pagination.Next />
-                            <Pagination.Last />
-                        </Pagination>
-            </div>
+           
         </div>
         </div>
         </div>

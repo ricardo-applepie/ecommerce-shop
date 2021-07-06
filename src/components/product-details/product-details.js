@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { commerce } from '../../lib/commerce';
 import Button  from "../button/button";
 import ContentZoom from 'react-content-zoom';
@@ -7,38 +7,44 @@ import Accordion from 'react-bootstrap/Accordion';
 import thanksgif from "../../assets/thanksanimation.gif"
 import { withRouter } from "react-router";
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import "./product-details.css"
- class Productdetails extends Component{
-    constructor(){
-        super();
-        this.state={
-            id:0,
-            productInformation:"",
-            categories:[]
+import "./product-details.css";
+import { useSelector, useDispatch } from 'react-redux';
 
+import { fetchCartItems } from "../../components/cartItems/cartItems";
+
+ function Productdetails (props){
+     const id = props.match.params.id;
+   const dispatch = useDispatch()
+   const [productInformation, setproductInformation]= useState("")
+     
+  function  getUrlParams() {
+      setproductInformation(id)
+        commerce.products.retrieve(id).then((product) => {
+            setproductInformation( product )
         }
-        this.addItemtoCart = this.addItemtoCart.bind(this)
-    }
-    componentDidMount() {
-        const id = this.props.match.params.id;
-        this.setState({id})
-
-        commerce.products.retrieve(id).then((product) => 
-        this.setState({ productInformation:product}));
+            );
 
     }
-    addItemtoCart(prod) {
-        commerce.cart.add(prod.id, 1).then((response) => console.log(response));
+
+useEffect(() => {
+    getUrlParams()
+}, [id])
+
+   function addItemtoCart(prod) {
+        commerce.cart.add(prod.id, 1).then((response) => {
+            dispatch(fetchCartItems())
+        });
    }
-render(){
-    const productD=this.state;
-  
+
+     let prodDescription = stripHtml(`${productInformation.description}`)
+
+   
     return (
         <div className="content__wrapper-width">
 
             <div className="product__detail ">
              <div className="product__detail-image">
-                    <img src={productD.productInformation.media&&productD.productInformation.media.source} />
+                    <img src={productInformation.media&&productInformation.media.source} />
               </div>
                 {/* <div className="product__detail-sub-images">
                    <ul>
@@ -49,59 +55,39 @@ render(){
                    </ul>
                 </div> */}
                 <div className="product__detail-description">
-                    <h3>{productD.productInformation.name ? productD.productInformation.name : 0}</h3>
-                    <h1>{productD.productInformation.name ? productD.productInformation.price.formatted_with_symbol : 0}</h1>
+                    <h3>{productInformation.name ? productInformation.name : 0}</h3>
+                    <h1>{productInformation.name ? productInformation.price.formatted_with_symbol : 0}</h1>
                     <p>
-                        {productD.productInformation ? productD.productInformation.description : ""}
+                        {prodDescription.result ? prodDescription.result:""}
                     </p>
 
                     <div className="product__detail-description-btns">
-                        <div onClick={() => this.addItemtoCart(productD.productInformation)}>
+                        <div onClick={() => addItemtoCart(productInformation)}>
 
                       
                         <Button>
-                           add 
+                                add to Cart
                         </Button>
                         </div>
-                        <FavoriteBorderIcon/>
+                        {/* <FavoriteBorderIcon/> */}
                     </div>
                     <div>
                         <div>
                             <div className="">
-                                <div className="js-global-accordion-header"><h1>STYLE NOTES</h1></div>
+                                <div className="js-global-accordion-header"><h1>Top Qaulity Only </h1></div>
                                 <div className="js-global-accordion-description">
 
-                                <p>
-                                    T-Shirts und Tank Tops gehören in jeden Herren-Kleiderschrank.
-
-                                    In dieser Saison traut sich das
+                                <p class="error">
+                                Available in stock 
                                 </p>
-                                </div>
-                            </div>
-                        
-                            <div>
-                                <div className="js-global-accordion-header"><h1>Liferand</h1></div>
-                                <div className="js-global-accordion-description">
+                                <div>
                                     <p>
-                                        T-Shirts und Tank Tops gehören in jeden Herren-Kleiderschrank.
-
-                                        In dieser Saison traut sich das Dream Team der 
+                                            But whether we are looking for Tortoise Creek among the dross of the supermarket shelf or springing for an inexpensive case of top-quality cabernet from de Négoce, there are bargains to be found — and savored.
                                     </p>
                                 </div>
-                             
-                            </div>
-                            <div>
-                                <div className="js-global-accordion-header"><h1>Default details</h1></div>
-                                <div className="js-global-accordion-description">
-                                    <p>
-                                        T-Shirts und Tank Tops gehören in jeden Herren-Kleiderschrank.
-
-                                        In dieser Saison traut sich 
-                                    </p>
                                 </div>
-                               
                             </div>
-                            
+                    
                         </div>
                     </div>
                 </div>    
@@ -115,7 +101,7 @@ render(){
         
     )
 
-}
+
   
 }
 export default withRouter(Productdetails);

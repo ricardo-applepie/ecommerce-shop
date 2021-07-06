@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 
 import logo from './logo.svg';
+import HamburgerMenu from "../src/components/hamburger-menu/hamburgerMenu"
+
 
 import './App.css';
 import { commerce } from './lib/commerce';
@@ -64,7 +66,9 @@ function App() {
           <Navbar />
 
         </nav>
-
+        <div>
+          <HamburgerMenu />
+        </div>
       </div>
 
 

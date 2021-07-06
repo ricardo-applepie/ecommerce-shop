@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
 import { useSelector, useDispatch } from 'react-redux'
 import { commerce } from '../../lib/commerce';
+import { fetchCartItems } from "../../components/cartItems/cartItems";
 
 
 import Snackbar from '@material-ui/core/Snackbar';
@@ -39,30 +40,30 @@ function Cartpage({total}) {
 
     useEffect(() => {
         // Update the document title using the browser API
-      function fetchCartItems( ) {
+      function fetchCartItemsTotal( ) {
 
           return function name(dispatch) {
 
               commerce.cart.contents().then((items) => {
                   
                   dispatch({ type: "cart/increment", payload: items })
-
-               console.log("okay")
+                   
             });
              
              
           }
         }
-        dispatch(fetchCartItems())
+        dispatch(fetchCartItemsTotal())
 
         });
 
     function removeItemFromCart(cartItemId){
         return function dispatchRemoveItemFromCart(dispatch){
             commerce.cart.remove(cartItemId.id).then((response) =>  {
-                console.log(response)
 
                 dispatch({ type: "cart/removeitem" });
+                dispatch(fetchCartItems())
+
                 setOpen(true);
 
             });
@@ -71,14 +72,15 @@ function Cartpage({total}) {
     }
     const counter = useSelector((state) => state.cart)
     return(
-        <div className="content__wrapper-width">
+        <div className="content__wrapper-width cart-items-div">
           <div>
               <h1 className="cart-title">Cart</h1>
           </div>
 
-            {counter.cartItems.length<= 0? "NO ITems in Cart ,please add Items we have much in sale right now ": counter.cartItems.map(function (cartItem) {
+            {counter.cartItems.length <= 0 ? (<p className="error error-message">NO ITems in Cart ,please add Items we have much in sale right now </p>): counter.cartItems.map(function (cartItem) {
                 return (
                     <div>
+                       
                         <div className="cart-items-wrapper ">
                             <div className="cart-image">
 
@@ -95,7 +97,7 @@ function Cartpage({total}) {
                                     <div onClick={() => dispatch(removeItemFromCart(cartItem))}>
                                         <DeleteIcon />
                                         <span>
-                                            Details bearbeiten
+                                            Delete
 
                                         </span>
                                         
@@ -127,7 +129,7 @@ function Cartpage({total}) {
 
         
         {
-            counter.cartItems.length<=0? "go to shop":
+            counter.cartItems.length<=0? "":
 
                     <div className="cart-total-wrapper">
                         <div className="cart-items-icons">

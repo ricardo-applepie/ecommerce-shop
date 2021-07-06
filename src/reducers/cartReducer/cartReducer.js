@@ -6,7 +6,8 @@ export const CartSlice = createSlice({
     initialState: {
         cartItems: [],
         products:[],
-        totalInCart:{}
+        totalInCart:{},
+        totalPrice:0
        
     },
     reducers: {
@@ -28,6 +29,9 @@ export const CartSlice = createSlice({
         },
         totalInCartItems: (state, action) => {
             state.totalInCart = action.payload
+        },
+        totalSum: (state, action) => {
+            state.totalPrice = action.payload
         }
     }
 })

@@ -30,9 +30,9 @@ export default function Signup() {
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Forgotten Password ?" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <button variant="primary" type="submit">
                         Submit
-                    </Button>
+                    </button>
                 </Form>
             </div>
 

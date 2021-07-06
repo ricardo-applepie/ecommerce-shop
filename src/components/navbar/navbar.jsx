@@ -11,6 +11,8 @@ import { Link} from "react-router-dom";
 
 
 return(
+<div>
+   
 
     <div className="navbar__inner-wrapper content__wrapper-width mobile-container">
 
@@ -40,13 +42,11 @@ return(
         
          <div>
             <CartItems/>
-         </div>
-
-
-       
+         </div>       
 
     </div>
-
+       
+    </div>
 )
 
 }
