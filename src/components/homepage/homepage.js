@@ -78,9 +78,11 @@ function Homepage(props){
                                 <img src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                                 <div className=" section-btn">
                                     <Link to="/shop">
-                                        <Button>
-                                            Shorts from 20 €
-                                        </Button>
+                                        <Link to="/shop">
+                                            <Button>
+                                                Shorts from 20 €
+                                            </Button>
+                                        </Link>
                                     </Link>
                                 </div>
                             </div>
@@ -121,17 +123,21 @@ function Homepage(props){
                             <div className="special-products-left">
                                 <img src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                                 <div className=" section-btn">
-                                    <Button>
-                                        Shorts from 20 $
-                                    </Button>
+                                    <Link to="/shop">
+                                        <Button>
+                                            Jumpers from 20 €
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="special-products-right">
                                 <img src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
                                 <div className=" section-btn">
-                                    <Button>
-                                        Jumpers from 20$
-                                    </Button>
+                                    <Link to="/shop">
+                                        <Button>
+                                            Jumpers from 20 €
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

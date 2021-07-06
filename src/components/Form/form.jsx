@@ -22,7 +22,7 @@ function Contactform() {
                 </Form.Group>
               
                 <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check type="checkbox" label="ready?" />
                 </Form.Group>
                
               
