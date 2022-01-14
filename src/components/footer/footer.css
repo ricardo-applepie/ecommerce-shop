@@ -1,15 +1,13 @@
-
-.footer__inner-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--red);
+.footer__inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
 }
-.footer__center-wrapper{
-   display:-webkit-inline-box;
-
+.footer__center-wrapper {
+  display: -webkit-inline-box;
 }
-.footer__center_item{
-    padding: 10px;
+.footer__center_item {
+  padding: 10px;
 }

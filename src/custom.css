@@ -1,254 +1,210 @@
-.headline{
-    font-size: 25px;
-    text-align: center;
-    color: var(--white);
+.headline {
+  font-size: 25px;
+  text-align: center;
+  color: var(--white);
 }
 .marketplace__text {
-    width: 50%;
-    padding: 5% 5% 5% 5%;
+  width: 50%;
+  padding: 5% 5% 5% 5%;
 }
 .marketplace__image {
-    width: 50%;
-    padding: 4% 5% 4% 5%;
-    position: relative;
+  width: 50%;
+  padding: 4% 5% 4% 5%;
+  position: relative;
 }
-.marketplace{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    background-color: var(--black);
+.marketplace {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--black);
 }
 .marketplace__text p {
-    color: var(--white);
+  color: var(--white);
 }
-.marketplace__image::after{
-      content: "";
-      width: 366px;
-    height: 267px;
-    background: url(./assets/many-images.jpg);
-    background-size: cover;
-       top: 17%;
-    left: 10%;
-    position: absolute;
-    display: inline-block;
+.marketplace__image::after {
+  content: '';
+  width: 366px;
+  height: 267px;
+  background: url(./assets/many-images.jpg);
+  background-size: cover;
+  top: 17%;
+  left: 10%;
+  position: absolute;
+  display: inline-block;
 }
 .our-services_item-img {
-    max-width: 90px;
-    margin: 28px auto;
+  max-width: 90px;
+  margin: 28px auto;
 }
 .our-services_item {
- 
-    padding: 3% 3% 0 6%;
-    text-align: center;
+  padding: 3% 3% 0 6%;
+  text-align: center;
 }
-.our-services{
-   display: grid;
-   grid-template-columns: 33% 33% 33%;
+.our-services {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
-.hiw-pg__steps{
-    display: flex;
+.hiw-pg__steps {
+  display: flex;
 }
-.hiw-pg__steps-left,.hiw-pg__steps-right{
-    width: 50%;
-    text-align: center ;
+.hiw-pg__steps-left,
+.hiw-pg__steps-right {
+  width: 50%;
+  text-align: center;
 }
-.hiw-pg__steps-right{
-  
-    background-color: var(--black);
+.hiw-pg__steps-right {
+  background-color: var(--black);
 }
-.hiw-pg__steps-item-num{
-        font-size: 1.625rem;
-    width: 37px;
-    height: 37px;
-    line-height: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.125rem;
-    width: 30px;
-    margin: 0 auto 15px;
-    height: 30px;
-    border-radius: 100%;
-    color: #fff;
-    background: #000;
+.hiw-pg__steps-item-num {
+  font-size: 1.625rem;
+  width: 37px;
+  height: 37px;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  width: 30px;
+  margin: 0 auto 15px;
+  height: 30px;
+  border-radius: 100%;
+  color: #fff;
+  background: #000;
 }
-.hiw-pg__steps-item-num-black{
-        font-size: 1.625rem;
-    width: 37px;
-    height: 37px;
-    line-height: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.125rem;
-    width: 30px;
-    margin: 0 auto 15px;
-    height: 30px;
-    border-radius: 100%;
-    color: #000;
-    background:var(--white) ;
+.hiw-pg__steps-item-num-black {
+  font-size: 1.625rem;
+  width: 37px;
+  height: 37px;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  width: 30px;
+  margin: 0 auto 15px;
+  height: 30px;
+  border-radius: 100%;
+  color: #000;
+  background: var(--white);
 }
-.hiw-pg__steps-headline{
-    color: var(--white);
+.hiw-pg__steps-headline {
+  color: var(--white);
 }
-.hiw-pg__steps-heading{
-    color:#006340 ;
-    padding:50px 0 30px 0;
+.hiw-pg__steps-heading {
+  color: #006340;
+  padding: 50px 0 30px 0;
 }
-.faqs__question, .faqs__question:nth-of-type(2n) {
-    margin: 0 3px 31px 18px;
-    width: calc(33.33333% - 32px);
-    position: relative;
-    transition: .3s;
-    border: 1px solid #fff;
-    padding: 25px;
-    line-height: 1.555;
+.faqs__question,
+.faqs__question:nth-of-type(2n) {
+  margin: 0 3px 31px 18px;
+  width: calc(33.33333% - 32px);
+  position: relative;
+  transition: 0.3s;
+  border: 1px solid #fff;
+  padding: 25px;
+  line-height: 1.555;
 }
-.faqs__question-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.faqs__question-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.faqs{
-    background-color: var(--black);
-    margin: 50px 0 0 0;
+.faqs {
+  background-color: var(--black);
+  margin: 50px 0 0 0;
 }
 .faqs-headline {
-    padding: 77px 0 46px 0;
+  padding: 77px 0 46px 0;
 }
 
-.faqs__question-excerpt,.faqs__question-text{
-color: var(--white);
+.faqs__question-excerpt,
+.faqs__question-text {
+  color: var(--white);
 }
 
 .urlaubsshop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 30px 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0 30px 0;
 }
 .urlaubsshop-right-img {
-    max-width: 137px;
-    margin: 0 auto;
+  max-width: 137px;
+  margin: 0 auto;
 }
-.urlaubsshop-right,.urlaubsshop-left{
-    width: 50%;
+.urlaubsshop-right,
+.urlaubsshop-left {
+  width: 50%;
 }
-.pagnation{
+.pagnation {
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 20px 0 0 0;
 }
 
-
-@media screen and (max-width:700px){
-
+@media screen and (max-width: 700px) {
 }
 
-
-@media screen and (min-width:1200px){
-    .text-center{
-        text-align: center;
-    }
-.cart-image{
-    width: 200px;
-}
-.cart-title{
+@media screen and (min-width: 1200px) {
+  .text-center {
     text-align: center;
-      padding: 30px 0 60px 0;
-}
-.cart-items-wrapper{
+  }
+  .cart-image {
+    width: 200px;
+  }
+  .cart-title {
+    text-align: center;
+    padding: 30px 0 60px 0;
+  }
+  .cart-items-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-   
-
-}
-.cart-items__icon{
+  }
+  .cart-items__icon {
     padding: 0 20px 0 0;
-}
-.cart-items-icons{
-      display: flex;
+  }
+  .cart-items-icons {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 30px 0 0 0;
-}
-.cart-total-wrapper{
-   display: flex;
+  }
+  .cart-total-wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 0 20px 35px;
-}
-.cart-items-details{
+  }
+  .cart-items-details {
     display: flex;
     flex-direction: column;
-}
-.cart-items-details-item{
-    padding: 0 20px 40px 20px ;
-}
-.cart-item-input{
-        max-width: 60px;
+  }
+  .cart-items-details-item {
+    padding: 0 20px 40px 20px;
+  }
+  .cart-item-input {
+    max-width: 60px;
     padding: 12px 10px;
     text-align: center;
-}
-.cart-item-input__descrition{
+  }
+  .cart-item-input__descrition {
     padding: 60px 0 0 0;
-}
-.login-form{
+  }
+  .login-form {
     width: 60%;
     margin: 0 auto;
-}
-.login-form-wrapper{
+  }
+  .login-form-wrapper {
     padding: 40px 0 100px 0;
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*popup*/
 
-
-
-input[type=text], input[type=password] {
+input[type='text'],
+input[type='password'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -259,7 +215,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -310,8 +266,8 @@ span.psw {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -342,44 +298,34 @@ span.psw {
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

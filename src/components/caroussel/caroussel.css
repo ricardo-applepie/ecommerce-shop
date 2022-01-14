@@ -1,15 +1,13 @@
-
-
 @media screen and (min-width: 1200px) {
-.carousel-inner img{
+  .carousel-inner img {
     height: 500px;
-}
-.carousel-inner {
+  }
+  .carousel-inner {
     width: 100%;
     margin: 0 auto;
-}
-  
-.carousel-caption {
+  }
+
+  .carousel-caption {
     position: absolute;
     right: 15%;
     bottom: 1.25rem;
@@ -19,8 +17,8 @@
     color: var(--white);
     top: 45%;
     font-weight: bold;
-}
-.carousel-caption h3{
-    font:bold;
-}
+  }
+  .carousel-caption h3 {
+    font: bold;
+  }
 }
