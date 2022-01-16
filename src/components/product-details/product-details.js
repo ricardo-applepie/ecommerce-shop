@@ -7,8 +7,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import thanksgif from '../../assets/thanksanimation.gif';
 import { withRouter } from 'react-router';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-
 import './product-details.css';
+
 class Productdetails extends Component {
   constructor() {
     super();
