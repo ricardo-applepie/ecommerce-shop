@@ -34,13 +34,13 @@ function Homepage(props) {
 
             <div class="special-products">
               <div className="special-products-left">
-                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text" src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Shorts from 20 $</Button>
                 </div>
               </div>
               <div className="special-products-right">
-                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text" src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Jumpers from 20$</Button>
                 </div>
@@ -55,6 +55,7 @@ function Homepage(props) {
             </div>
             <div class="buy_now-section">
               <img
+                alt="buy now"
                 className="buy_now-section-image"
                 src="https://media.boohoo.com/i/boohooamplience/040621_PRIDE_LB_DESK_DE"
               />

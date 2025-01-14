@@ -25,7 +25,7 @@ class ProductItem extends Component {
           <img
             className="product__image"
             src={product.media.source}
-            alt={product.name}
+            alt={product.name || "product image"}
           />
         </Link>
         <div className="product__info">
