@@ -83,7 +83,7 @@ function Homepage(props) {
               <h1 className="section-heading">CONTACT US NOW</h1>
 
               <div className="contact-form__section section-heading">
-                <div className="contact-form__section-left">
+                <div className="contact-form__section-left special-products-left">
                   <div>
                     <img alt="default alt text"src="https://wallpapers.com/images/high/customer-support-contact-us-illustration-11aicfhwnyfusfzk.png" />
                   </div>
@@ -92,7 +92,7 @@ function Homepage(props) {
                     for your time{' '}
                   </p>
                 </div>
-                <div className="contact-form__section-right">
+                <div className="contact-form__section-right special-products-right">
                   <Contactform />
                 </div>
               </div>
