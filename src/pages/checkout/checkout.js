@@ -44,7 +44,6 @@ function Checkout() {
     dispatch(fetchCartItems());
   });
 
-  const counter = useSelector((state) => state.cart);
   return (
     <div className="content__wrapper-width">
       <div className="">
