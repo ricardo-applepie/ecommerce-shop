@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+
 import { commerce } from '../../lib/commerce';
 import Button from '../button/button';
-import ContentZoom from 'react-content-zoom';
-import { stripHtml } from 'string-strip-html';
-import Accordion from 'react-bootstrap/Accordion';
 import thanksgif from '../../assets/thanksanimation.gif';
 import { withRouter } from 'react-router';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';

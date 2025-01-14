@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './navbar.css';
 import logo from '../../assets/website-logo.jpg';
 import carticon from '../../assets/cart-icon.png';
 import Button from '../button/button';
-import { Link } from 'react-router-dom';
 
 export const Navbar = (props) => {
   return (

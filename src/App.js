@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { commerce } from './lib/commerce';
 import { Navbar } from './components/navbar/navbar';
@@ -14,7 +13,7 @@ import Login from './components/login/login';
 import Signup from './pages/signup/signup';
 import Contact from './pages/contact/contact';
 import Checkout from './pages/checkout/checkout';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route  } from 'react-router-dom';
 
 class App extends Component {
   constructor() {

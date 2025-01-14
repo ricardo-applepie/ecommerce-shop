@@ -1,9 +1,11 @@
 import React from 'react';
-import ProductsList from '../../components/ProductsList';
-import house from '../../assets/1200px-Shop.svg.png';
+import { Link } from 'react-router-dom';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Pagination from 'react-bootstrap/Pagination';
-import { Link } from 'react-router-dom';
+
+import ProductsList from '../../components/ProductsList';
+import house from '../../assets/1200px-Shop.svg.png';
+
 
 function Shop(props) {
   return (

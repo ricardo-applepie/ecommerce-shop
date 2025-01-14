@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import EditIcon from '@material-ui/icons/Edit';
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import { Link } from 'react-router-dom';
 import Button from '../../components/button/button';
 import { useSelector, useDispatch } from 'react-redux';

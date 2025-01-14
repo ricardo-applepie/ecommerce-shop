@@ -1,13 +1,9 @@
 import { React } from 'react';
+
 import Contactform from '../Form/form';
-import SearchForm from '../search_form/search_form';
-import Productdetails from '../product-details/product-details';
-import Getcartitems from '../cart-contents';
-import { Footer } from '../footer/footer';
 import Carouselslider from '../caroussel/carousel';
 import Button from '../button/button';
 import ProductsList from '../ProductsList';
-import { Link } from 'react-router-dom';
 
 function Homepage(props) {
   return (

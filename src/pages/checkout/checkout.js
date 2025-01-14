@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Contact from '../../components/Form/form';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { commerce } from '../../lib/commerce';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
