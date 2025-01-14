@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Link } from 'react-router-dom';
 
 import Contactform from '../Form/form';
 import Carouselslider from '../caroussel/carousel';
@@ -36,13 +37,23 @@ function Homepage(props) {
               <div className="special-products-left">
                 <img alt="default alt text" src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
-                  <Button>Shorts from 20 $</Button>
+                  <Link 
+                    className="mini-cart-button"
+                    to="/shop"
+                  >                  
+                    Shorts from 20 $
+                  </Link>
                 </div>
               </div>
               <div className="special-products-right">
                 <img alt="default alt text" src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
-                  <Button>Jumpers from 20$</Button>
+                  <Link 
+                    className="mini-cart-button"
+                    to="/shop"
+                  >
+                    Jumpers from 20$
+                  </Link>
                 </div>
               </div>
             </div>
