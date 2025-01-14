@@ -17,14 +17,14 @@ function Special() {
             </p>
           </div>
           <div class="marketplace__image">
-            <img src={traingle} />
+            <img alt="default alt text"src={traingle} />
           </div>
         </div>
 
         <div className="our-services">
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1 className=".h1"> Global Access</h1>
             <div>
@@ -36,7 +36,7 @@ function Special() {
           </div>
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1 className=".h1"> Global Access</h1>
             <div>
@@ -48,7 +48,7 @@ function Special() {
           </div>
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1 className=".h1"> Global Access</h1>
             <div>
@@ -60,7 +60,7 @@ function Special() {
           </div>
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1 className=".h1"> Global Access</h1>
             <div>
@@ -72,7 +72,7 @@ function Special() {
           </div>
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1>100% Verified Authentic</h1>
             <div>
@@ -85,7 +85,7 @@ function Special() {
           </div>
           <div className="our-services_item">
             <div className="our-services_item-img">
-              <img src={graph} />
+              <img alt="default alt text"src={graph} />
             </div>
             <h1>Transparent Pricing</h1>
             <div>

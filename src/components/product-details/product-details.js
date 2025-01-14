@@ -44,10 +44,10 @@ class Productdetails extends Component {
           </div>
           {/* <div className="product__detail-sub-images">
                    <ul>
-                        <li> <img src="" /></li>
-                        <li> <img src="" /></li>
-                        <li> <img src="" /></li>
-                        <li> <img src="" /></li>
+                        <li> <img alt="default alt text"src="" /></li>
+                        <li> <img alt="default alt text"src="" /></li>
+                        <li> <img alt="default alt text"src="" /></li>
+                        <li> <img alt="default alt text"src="" /></li>
                    </ul>
                 </div> */}
           <div className="product__detail-description">
@@ -117,7 +117,7 @@ class Productdetails extends Component {
           </div>
         </div>
         <div className="product-detail-gif">
-          <img src={thanksgif} />
+          <img alt="default alt text"src={thanksgif} />
         </div>
       </div>
     );

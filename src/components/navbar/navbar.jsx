@@ -12,7 +12,7 @@ export const Navbar = (props) => {
       <div className="navbar__left-wrapper">
         <div className="navbar__left-logo">
           <Link className="navbar__center_item-link" to="/">
-            <img src={logo} />
+            <img alt="default alt text"src={logo} />
           </Link>
         </div>
       </div>
@@ -56,9 +56,9 @@ export const Navbar = (props) => {
       </div>
 
       <div id="right" className="navbar__right-wrapper">
-        <a>
-          <img src={carticon} />
-        </a>
+        <span>
+          <img alt="default alt text"src={carticon} />
+        </span>
         <div className="shopping-items">
           <div className=" shopping-items-max-height">
             {props.total &&
@@ -69,7 +69,7 @@ export const Navbar = (props) => {
                     <div className="shopping-items__inner-wrapper">
                       <div class="mini-cart-image-container">
                         <div>
-                          <img src={productItem.media.source} />
+                          <img alt="default alt text"src={productItem.media.source} />
                         </div>
                       </div>
 

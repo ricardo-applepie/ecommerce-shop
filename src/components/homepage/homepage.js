@@ -34,13 +34,13 @@ function Homepage(props) {
 
             <div class="special-products">
               <div className="special-products-left">
-                <img src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Shorts from 20 $</Button>
                 </div>
               </div>
               <div className="special-products-right">
-                <img src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Jumpers from 20$</Button>
                 </div>
@@ -65,13 +65,13 @@ function Homepage(props) {
 
             <div class="special-products">
               <div className="special-products-left">
-                <img src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_SHORTS_LB5_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Shorts from 20 $</Button>
                 </div>
               </div>
               <div className="special-products-right">
-                <img src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
+                <img alt="default alt text"src="https://media.boohoo.com/i/boohooamplience/100621_COORDS_LB4_DESK?$homesplash_desktop_third_1x$" />
                 <div className=" section-btn">
                   <Button>Jumpers from 20$</Button>
                 </div>
@@ -84,7 +84,7 @@ function Homepage(props) {
               <div className="contact-form__section section-heading">
                 <div className="contact-form__section-left">
                   <div>
-                    <img src="http://www.rayholidaysbd.com/wp-content/uploads/2019/04/contact-us.png" />
+                    <img alt="default alt text"src="http://www.rayholidaysbd.com/wp-content/uploads/2019/04/contact-us.png" />
                   </div>
                   <p>
                     Please Fill the form ,We will be in touch with you , Thanks

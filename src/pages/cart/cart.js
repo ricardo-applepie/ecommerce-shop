@@ -6,24 +6,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { commerce } from '../../lib/commerce';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import { makeStyles } from '@material-ui/core/styles';
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
-
 function Cartpage({ total }) {
   const dispatch = useDispatch();
-  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClose = (event, reason) => {
@@ -73,7 +62,7 @@ function Cartpage({ total }) {
               <div>
                 <div className="cart-items-wrapper ">
                   <div className="cart-image">
-                    <img src={cartItem.media.source} />
+                    <img alt="default alt text"src={cartItem.media.source} />
                   </div>
 
                   <div className="cart-items-details">
@@ -128,13 +117,13 @@ function Cartpage({ total }) {
         <div className="cart-total-wrapper">
           <div className="cart-items-icons">
             <div className="cart-items__icon">
-              <img src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
+              <img alt="default alt text"src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
             </div>
             <div className="cart-items__icon">
-              <img src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
+              <img alt="default alt text"src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
             </div>
             <div className="cart-items__icon">
-              <img src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
+              <img alt="default alt text"src="https://www.boohooman.com/on/demandware.static/-/Library-Sites-boohooman-content-global/default/dw5223fcd6/images/payment-method-icons/master-card.png" />
             </div>
           </div>
           <div className="cart-details-total">

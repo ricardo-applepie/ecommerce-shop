@@ -54,7 +54,7 @@ function Shop(props) {
 
             <div className="urlaubsshop-right">
               <div className="urlaubsshop-right-img">
-                <img src={house} />
+                <img alt="default alt text"src={house} />
               </div>
             </div>
           </div>
