@@ -30,7 +30,7 @@ export const Navbar = (props) => {
             </Link>
           </li> */}
           <li className="navbar__center_item">
-            <Link className="navbar__center_item-link" to="/ricardo-special">
+            <Link className="navbar__center_item-link" to="/special">
               {' '}
               Special
             </Link>

@@ -77,7 +77,7 @@ class App extends Component {
           <Route path="/services">Services</Route>
           <Route path="/sale">Sale</Route>
           <Route path="/accessories">accessories</Route>
-          <Route path="/ricardo-special">
+          <Route path="/special">
             <Special />
           </Route>
           <Route path="/Shipping">Shipping</Route>
