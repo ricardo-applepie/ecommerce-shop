@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className="footer__inner-wrapper">
       <div className="footer__left">
         <div className="footer__left-logo">
-          <img alt="default alt text"src="" />
+
         </div>
       </div>
       <div className="footer__center">
@@ -40,7 +40,6 @@ export const Footer = () => {
         </ul>
       </div>
       <div className="footer__right">
-        <img alt="default alt text"src="" />
       </div>
     </div>
   );
