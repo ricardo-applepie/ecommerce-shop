@@ -40,17 +40,10 @@ class Productdetails extends Component {
                 productD.productInformation.media &&
                 productD.productInformation.media.source
               }
-              alt='product detail image'
+              alt='product detail'
             />
           </div>
-          {/* <div className="product__detail-sub-images">
-                   <ul>
-                        <li> <img alt="default alt text"src="" /></li>
-                        <li> <img alt="default alt text"src="" /></li>
-                        <li> <img alt="default alt text"src="" /></li>
-                        <li> <img alt="default alt text"src="" /></li>
-                   </ul>
-                </div> */}
+
           <div className="product__detail-description">
             <h3>
               {productD.productInformation.name
@@ -118,7 +111,7 @@ class Productdetails extends Component {
           </div>
         </div>
         <div className="product-detail-gif">
-          <img alt="default alt text"src={thanksgif} />
+          <img alt="default alt text" src={thanksgif} />
         </div>
       </div>
     );
