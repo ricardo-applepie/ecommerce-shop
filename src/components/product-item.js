@@ -7,9 +7,6 @@ import '../components/navbar/navbar.css';
 import { Link } from 'react-router-dom';
 
 class ProductItem extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   addToCart = () => {
     commerce.cart.add(this.props.product.id, 1);

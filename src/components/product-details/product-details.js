@@ -40,6 +40,7 @@ class Productdetails extends Component {
                 productD.productInformation.media &&
                 productD.productInformation.media.source
               }
+              alt='product detail image'
             />
           </div>
           {/* <div className="product__detail-sub-images">
