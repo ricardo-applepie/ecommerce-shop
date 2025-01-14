@@ -24,11 +24,11 @@ export const Navbar = (props) => {
               Home
             </Link>
           </li>
-          <li className="navbar__center_item">
+          {/* <li className="navbar__center_item">
             <Link className="navbar__center_item-link" to="/shop">
               Shop
             </Link>
-          </li>
+          </li> */}
           <li className="navbar__center_item">
             <Link className="navbar__center_item-link" to="/ricardo-special">
               {' '}
