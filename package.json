@@ -2,6 +2,7 @@
   "name": "ricardo-future-store",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@chec/commerce.js": "^2.6.1",
     "@material-ui/icons": "^4.11.2",
