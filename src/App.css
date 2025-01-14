@@ -358,7 +358,7 @@ button {
   }
 
   .content__wrapper-width {
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
   }
   .section-heading {
