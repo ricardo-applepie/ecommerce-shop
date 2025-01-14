@@ -8,6 +8,7 @@
 }
 
 .marketplace__image {
+  display: none;
   width: 100%;
   padding: 0;
 }
