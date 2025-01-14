@@ -71,7 +71,7 @@ function Homepage(props) {
                 src="https://media.boohoo.com/i/boohooamplience/040621_PRIDE_LB_DESK_DE"
               />
               <div className="buy_now-section-btn section-btn">
-                <Button>Shop Now</Button>
+                <Link className="mini-cart-button" to="shop">Shop Now</Link>
               </div>
             </div>
 
