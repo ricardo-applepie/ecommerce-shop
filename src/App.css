@@ -393,4 +393,7 @@ button {
     padding: 10px;
     border: none;
   }
+  .mini-cart-button:hover {
+    text-decoration: none;
+  }
 }
