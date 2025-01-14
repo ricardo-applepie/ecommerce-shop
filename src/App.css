@@ -325,7 +325,7 @@ button {
     justify-content: space-between;
   }
   .special-products-left {
-    width: 40%;
+    width: 47%;
   }
   .cartEdit {
     cursor: pointer;
@@ -337,7 +337,7 @@ button {
     color: var(--white);
   }
   .special-products-right {
-    width: 40%;
+    width: 47%;
   }
   .content__inner-wrapper {
     max-width: 1920px;

@@ -85,7 +85,7 @@ function Homepage(props) {
               <div className="contact-form__section section-heading">
                 <div className="contact-form__section-left">
                   <div>
-                    <img alt="default alt text"src="http://www.rayholidaysbd.com/wp-content/uploads/2019/04/contact-us.png" />
+                    <img alt="default alt text"src="https://wallpapers.com/images/high/customer-support-contact-us-illustration-11aicfhwnyfusfzk.png" />
                   </div>
                   <p>
                     Please Fill the form ,We will be in touch with you , Thanks
